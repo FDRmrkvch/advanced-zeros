@@ -18,10 +18,12 @@ module.exports = function getZerosCount(number, base) {
 			count = 0;
 			reNumber = number;
 			while (reNumber/i > 0){
-				count += Math.floor(reNumber/i);
-				reNumber = Math.floor(reNumber/i);
+				count += (reNumber/i);
+				reNumber = (reNumber/i);
 			}
 		
+			if(nullCount > count/max){ 
+		  		nullCount=count/max;
 			} 
 		}
 	}
