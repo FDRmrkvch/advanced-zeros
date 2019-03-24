@@ -1,31 +1,28 @@
 module.exports = function getZerosCount(number, base) {
   
-  let max = 0
-  let count = 0;
-	let nullCount;
-	// let reBase = base;
-	// let reNumber;
+let maxPower = 0
+let count = 0;
+let reBase = base;
+let reNumber;
+let nullCount = Infinity;
   
-	for (let i = 2; i <= base; i++){ 
-		if (base % i == 0){
-  
+for (let i = 2; i <= base; i++){ 
+	if (reBase % i == 0){
 			maxPower = 0;
-			while (base % i == 0){ 
-				maxPower++; 
-				base = Math.floor(base/i); 
-			}
-  
+			  while (reBase % i == 0){ 
+				  maxPower++; 
+				  reBase = Math.floor(reBase/i); 
+			  }
 			count = 0;
-			// reNumber = number;
-			while (number/i > 0){
-				count += Math.floor(number/i);
-				number = Math.floor(number/i);
-			}
-		
-			if(nullCount > count/max){ 
-		  		nullCount=count/max;
+			reNumber = number;
+			  while (reNumber/i > 0){
+				  count+=Math.floor(reNumber/i);
+				  reNumber = Math.floor(reNumber/i);
+			  }
+		if(nullCount > count/maxPower){ 
+        nullCount=count/maxPower;
 			} 
 		}
 	}
-	return Math.floor(nullCount); 
+return Math.floor(nullCount); 
 }
