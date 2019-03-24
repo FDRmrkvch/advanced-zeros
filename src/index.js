@@ -1,3 +1,11 @@
 module.exports = function getZerosCount(number, base) {
-  // your implementation
+  
+  var n = [];
+  var fact = [];
+  var result = [];
+  var original = numb;
+
+  let mult = 2;
+
+
 }
